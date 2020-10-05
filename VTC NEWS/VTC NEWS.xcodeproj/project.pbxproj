@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0291271252AC57A00EDFA87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0291270252AC57A00EDFA87 /* AppDelegate.swift */; };
+		B0291273252AC57A00EDFA87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0291272252AC57A00EDFA87 /* SceneDelegate.swift */; };
+		B0291275252AC57A00EDFA87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0291274252AC57A00EDFA87 /* ViewController.swift */; };
+		B0291278252AC57A00EDFA87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0291276252AC57A00EDFA87 /* Main.storyboard */; };
+		B029127A252AC57E00EDFA87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0291279252AC57E00EDFA87 /* Assets.xcassets */; };
+		B029127D252AC57E00EDFA87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B029127B252AC57E00EDFA87 /* LaunchScreen.storyboard */; };
+		B0291288252AC57F00EDFA87 /* VTC_NEWSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0291287252AC57F00EDFA87 /* VTC_NEWSTests.swift */; };
+		B0291293252AC57F00EDFA87 /* VTC_NEWSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0291292252AC57F00EDFA87 /* VTC_NEWSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0291284252AC57F00EDFA87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0291265252AC57A00EDFA87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B029126C252AC57A00EDFA87;
+			remoteInfo = "VTC NEWS";
+		};
+		B029128F252AC57F00EDFA87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0291265252AC57A00EDFA87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B029126C252AC57A00EDFA87;
+			remoteInfo = "VTC NEWS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B029126D252AC57A00EDFA87 /* VTC NEWS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VTC NEWS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0291270252AC57A00EDFA87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B0291272252AC57A00EDFA87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B0291274252AC57A00EDFA87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0291277252AC57A00EDFA87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0291279252AC57E00EDFA87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B029127C252AC57E00EDFA87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B029127E252AC57E00EDFA87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0291283252AC57F00EDFA87 /* VTC NEWSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VTC NEWSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0291287252AC57F00EDFA87 /* VTC_NEWSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTC_NEWSTests.swift; sourceTree = "<group>"; };
+		B0291289252AC57F00EDFA87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B029128E252AC57F00EDFA87 /* VTC NEWSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VTC NEWSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0291292252AC57F00EDFA87 /* VTC_NEWSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTC_NEWSUITests.swift; sourceTree = "<group>"; };
+		B0291294252AC57F00EDFA87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B029126A252AC57A00EDFA87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0291280252AC57F00EDFA87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B029128B252AC57F00EDFA87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0291264252AC57A00EDFA87 = {
+			isa = PBXGroup;
+			children = (
+				B029126F252AC57A00EDFA87 /* VTC NEWS */,
+				B0291286252AC57F00EDFA87 /* VTC NEWSTests */,
+				B0291291252AC57F00EDFA87 /* VTC NEWSUITests */,
+				B029126E252AC57A00EDFA87 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B029126E252AC57A00EDFA87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B029126D252AC57A00EDFA87 /* VTC NEWS.app */,
+				B0291283252AC57F00EDFA87 /* VTC NEWSTests.xctest */,
+				B029128E252AC57F00EDFA87 /* VTC NEWSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B029126F252AC57A00EDFA87 /* VTC NEWS */ = {
+			isa = PBXGroup;
+			children = (
+				B0291270252AC57A00EDFA87 /* AppDelegate.swift */,
+				B0291272252AC57A00EDFA87 /* SceneDelegate.swift */,
+				B0291274252AC57A00EDFA87 /* ViewController.swift */,
+				B0291276252AC57A00EDFA87 /* Main.storyboard */,
+				B0291279252AC57E00EDFA87 /* Assets.xcassets */,
+				B029127B252AC57E00EDFA87 /* LaunchScreen.storyboard */,
+				B029127E252AC57E00EDFA87 /* Info.plist */,
+			);
+			path = "VTC NEWS";
+			sourceTree = "<group>";
+		};
+		B0291286252AC57F00EDFA87 /* VTC NEWSTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0291287252AC57F00EDFA87 /* VTC_NEWSTests.swift */,
+				B0291289252AC57F00EDFA87 /* Info.plist */,
+			);
+			path = "VTC NEWSTests";
+			sourceTree = "<group>";
+		};
+		B0291291252AC57F00EDFA87 /* VTC NEWSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B0291292252AC57F00EDFA87 /* VTC_NEWSUITests.swift */,
+				B0291294252AC57F00EDFA87 /* Info.plist */,
+			);
+			path = "VTC NEWSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B029126C252AC57A00EDFA87 /* VTC NEWS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0291297252AC57F00EDFA87 /* Build configuration list for PBXNativeTarget "VTC NEWS" */;
+			buildPhases = (
+				B0291269252AC57A00EDFA87 /* Sources */,
+				B029126A252AC57A00EDFA87 /* Frameworks */,
+				B029126B252AC57A00EDFA87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VTC NEWS";
+			productName = "VTC NEWS";
+			productReference = B029126D252AC57A00EDFA87 /* VTC NEWS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0291282252AC57F00EDFA87 /* VTC NEWSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B029129A252AC57F00EDFA87 /* Build configuration list for PBXNativeTarget "VTC NEWSTests" */;
+			buildPhases = (
+				B029127F252AC57F00EDFA87 /* Sources */,
+				B0291280252AC57F00EDFA87 /* Frameworks */,
+				B0291281252AC57F00EDFA87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0291285252AC57F00EDFA87 /* PBXTargetDependency */,
+			);
+			name = "VTC NEWSTests";
+			productName = "VTC NEWSTests";
+			productReference = B0291283252AC57F00EDFA87 /* VTC NEWSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B029128D252AC57F00EDFA87 /* VTC NEWSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B029129D252AC57F00EDFA87 /* Build configuration list for PBXNativeTarget "VTC NEWSUITests" */;
+			buildPhases = (
+				B029128A252AC57F00EDFA87 /* Sources */,
+				B029128B252AC57F00EDFA87 /* Frameworks */,
+				B029128C252AC57F00EDFA87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0291290252AC57F00EDFA87 /* PBXTargetDependency */,
+			);
+			name = "VTC NEWSUITests";
+			productName = "VTC NEWSUITests";
+			productReference = B029128E252AC57F00EDFA87 /* VTC NEWSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0291265252AC57A00EDFA87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "hưng hoàng";
+				TargetAttributes = {
+					B029126C252AC57A00EDFA87 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					B0291282252AC57F00EDFA87 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = B029126C252AC57A00EDFA87;
+					};
+					B029128D252AC57F00EDFA87 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = B029126C252AC57A00EDFA87;
+					};
+				};
+			};
+			buildConfigurationList = B0291268252AC57A00EDFA87 /* Build configuration list for PBXProject "VTC NEWS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0291264252AC57A00EDFA87;
+			productRefGroup = B029126E252AC57A00EDFA87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B029126C252AC57A00EDFA87 /* VTC NEWS */,
+				B0291282252AC57F00EDFA87 /* VTC NEWSTests */,
+				B029128D252AC57F00EDFA87 /* VTC NEWSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B029126B252AC57A00EDFA87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B029127D252AC57E00EDFA87 /* LaunchScreen.storyboard in Resources */,
+				B029127A252AC57E00EDFA87 /* Assets.xcassets in Resources */,
+				B0291278252AC57A00EDFA87 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0291281252AC57F00EDFA87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B029128C252AC57F00EDFA87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0291269252AC57A00EDFA87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0291275252AC57A00EDFA87 /* ViewController.swift in Sources */,
+				B0291271252AC57A00EDFA87 /* AppDelegate.swift in Sources */,
+				B0291273252AC57A00EDFA87 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B029127F252AC57F00EDFA87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0291288252AC57F00EDFA87 /* VTC_NEWSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B029128A252AC57F00EDFA87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0291293252AC57F00EDFA87 /* VTC_NEWSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0291285252AC57F00EDFA87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B029126C252AC57A00EDFA87 /* VTC NEWS */;
+			targetProxy = B0291284252AC57F00EDFA87 /* PBXContainerItemProxy */;
+		};
+		B0291290252AC57F00EDFA87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B029126C252AC57A00EDFA87 /* VTC NEWS */;
+			targetProxy = B029128F252AC57F00EDFA87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0291276252AC57A00EDFA87 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0291277252AC57A00EDFA87 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B029127B252AC57E00EDFA87 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B029127C252AC57E00EDFA87 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0291295252AC57F00EDFA87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B0291296252AC57F00EDFA87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0291298252AC57F00EDFA87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WSP6ZUF48P;
+				INFOPLIST_FILE = "VTC NEWS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "vn.com.tek4tv.vtcnews.VTC-NEWS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0291299252AC57F00EDFA87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WSP6ZUF48P;
+				INFOPLIST_FILE = "VTC NEWS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "vn.com.tek4tv.vtcnews.VTC-NEWS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B029129B252AC57F00EDFA87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WSP6ZUF48P;
+				INFOPLIST_FILE = "VTC NEWSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "vn.com.tek4tv.vtcnews.VTC-NEWSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VTC NEWS.app/VTC NEWS";
+			};
+			name = Debug;
+		};
+		B029129C252AC57F00EDFA87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WSP6ZUF48P;
+				INFOPLIST_FILE = "VTC NEWSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "vn.com.tek4tv.vtcnews.VTC-NEWSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VTC NEWS.app/VTC NEWS";
+			};
+			name = Release;
+		};
+		B029129E252AC57F00EDFA87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WSP6ZUF48P;
+				INFOPLIST_FILE = "VTC NEWSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "vn.com.tek4tv.vtcnews.VTC-NEWSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "VTC NEWS";
+			};
+			name = Debug;
+		};
+		B029129F252AC57F00EDFA87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WSP6ZUF48P;
+				INFOPLIST_FILE = "VTC NEWSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "vn.com.tek4tv.vtcnews.VTC-NEWSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "VTC NEWS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0291268252AC57A00EDFA87 /* Build configuration list for PBXProject "VTC NEWS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0291295252AC57F00EDFA87 /* Debug */,
+				B0291296252AC57F00EDFA87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0291297252AC57F00EDFA87 /* Build configuration list for PBXNativeTarget "VTC NEWS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0291298252AC57F00EDFA87 /* Debug */,
+				B0291299252AC57F00EDFA87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B029129A252AC57F00EDFA87 /* Build configuration list for PBXNativeTarget "VTC NEWSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B029129B252AC57F00EDFA87 /* Debug */,
+				B029129C252AC57F00EDFA87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B029129D252AC57F00EDFA87 /* Build configuration list for PBXNativeTarget "VTC NEWSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B029129E252AC57F00EDFA87 /* Debug */,
+				B029129F252AC57F00EDFA87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0291265252AC57A00EDFA87 /* Project object */;
+}
