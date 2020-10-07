@@ -9,6 +9,10 @@ target 'VTC NEWS' do
   # add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
   pod 'Firebase/Messaging'
+  pod 'GoogleAds-IMA-iOS-SDK'
+  pod 'SnapKit'
+  pod 'GoSwiftyM3U8'
+  pod 'SwiftEventBus'
   # add pods for any other desired Firebase products
   pod 'SnapKit'
   # https://firebase.google.com/docs/ios/setup#available-pods

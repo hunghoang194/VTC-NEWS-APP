@@ -1,0 +1,6 @@
+framework module GoSwiftyM3U8 {
+  umbrella header "GoSwiftyM3U8-umbrella.h"
+
+  export *
+  module * { export * }
+}

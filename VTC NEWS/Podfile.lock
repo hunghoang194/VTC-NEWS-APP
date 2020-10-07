@@ -45,6 +45,7 @@ PODS:
     - GoogleUtilities/Reachability (~> 6.7)
     - GoogleUtilities/UserDefaults (~> 6.7)
     - Protobuf (>= 3.9.2, ~> 3.9)
+  - GoogleAds-IMA-iOS-SDK (3.12.1)
   - GoogleAppMeasurement (6.8.3):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
     - GoogleUtilities/MethodSwizzler (~> 6.7)
@@ -72,6 +73,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.7.2):
     - GoogleUtilities/Logger
+  - GoSwiftyM3U8 (1.0.0)
   - nanopb (1.30906.0):
     - nanopb/decode (= 1.30906.0)
     - nanopb/encode (= 1.30906.0)
@@ -80,11 +82,15 @@ PODS:
   - PromisesObjC (1.2.10)
   - Protobuf (3.13.0)
   - SnapKit (5.0.1)
+  - SwiftEventBus (5.0.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Messaging
+  - GoogleAds-IMA-iOS-SDK
+  - GoSwiftyM3U8
   - SnapKit
+  - SwiftEventBus
 
 SPEC REPOS:
   trunk:
@@ -95,13 +101,16 @@ SPEC REPOS:
     - FirebaseInstallations
     - FirebaseInstanceID
     - FirebaseMessaging
+    - GoogleAds-IMA-iOS-SDK
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - GoSwiftyM3U8
     - nanopb
     - PromisesObjC
     - Protobuf
     - SnapKit
+    - SwiftEventBus
 
 SPEC CHECKSUMS:
   Firebase: 8db6f2d1b2c5e2984efba4949a145875a8f65fe5
@@ -111,14 +120,17 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 466c7b4d1f58fe16707693091da253726a731ed2
   FirebaseInstanceID: ac5a82fcd21f804dbfc8f318eff9e1d7a9916e49
   FirebaseMessaging: fc1f98b4592f8f2ea538169b1c317c6e76f81300
+  GoogleAds-IMA-iOS-SDK: 3c01b8db7d01de6b4a3b1d58744d4bc426a2d821
   GoogleAppMeasurement: 966e88df9d19c15715137bb2ddaf52373f111436
   GoogleDataTransport: b7f406340a291370045a270c599e53c6fa6ec20f
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  GoSwiftyM3U8: 24c6ca77a150fc7f0cf17895ff11c9e8ff1e4d87
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftEventBus: b30f617a6aca5a9336464b4d3f5931034762f2d5
 
-PODFILE CHECKSUM: 533cc4fe70745f06560aaccb4779c1775dedf75b
+PODFILE CHECKSUM: 24896da0387733da9ec1517b3160d425991f495e
 
 COCOAPODS: 1.8.3
