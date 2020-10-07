@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>207840954819-mbl2pifij4torfh3r258nhitc3q0deru.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.207840954819-mbl2pifij4torfh3r258nhitc3q0deru</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDq9Mh6nup_twNwu4y-BFwc6aqjCIVHAOw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>207840954819</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>vn.com.tek4tv.vtcnews.VTC-NEWS</string>
+	<key>PROJECT_ID</key>
+	<string>vtc-news-f03be</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vtc-news-f03be.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:207840954819:ios:aa170c0c74d9a4aa905576</string>
+	<key>DATABASE_URL</key>
+	<string>https://vtc-news-f03be.firebaseio.com</string>
+</dict>
+</plist>

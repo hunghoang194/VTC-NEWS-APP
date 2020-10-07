@@ -1,0 +1,6 @@
+framework module Pods_VTC_NEWS_VTC_NEWSUITests {
+  umbrella header "Pods-VTC NEWS-VTC NEWSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
