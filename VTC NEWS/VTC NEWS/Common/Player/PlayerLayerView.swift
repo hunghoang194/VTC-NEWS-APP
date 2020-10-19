@@ -8,7 +8,6 @@
 
 import UIKit
 import AVFoundation
-//import GoogleCast
 
 /**
  Player status emun
@@ -96,9 +95,8 @@ open class PlayerLayerView: UIView {
     /// 计时器
     var timer: Timer?
     var shareUrl: String!
-    open var linkCastScreen = UserDefaults.standard.string(forKey: "link")
     // sua o day
-//    var sessionManager: GCKSessionManager!
+    var isSelected: Bool = false
     
     fileprivate var urlAsset: AVURLAsset?
     
@@ -187,11 +185,10 @@ open class PlayerLayerView: UIView {
         player?.seek(to: seekTime)
     }
 
-    
     open func castScreen(){
         NotificationCenter.default
         .post(name: NSNotification.Name("castScreen"),
-         object: nil)
+            object: nil)
     }
     
     open func share() {
@@ -202,6 +199,9 @@ open class PlayerLayerView: UIView {
     
     deinit {
       NotificationCenter.default.removeObserver(self)
+      NotificationCenter.default.removeObserver(self, name: Notification.Name("shareLink"), object: nil)
+      NotificationCenter.default.removeObserver(self, name: Notification.Name("castScreen"), object: nil)
+      NotificationCenter.default.removeObserver(self, name: Notification.Name("suggestionView"), object: nil)
     }
     
     

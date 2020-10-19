@@ -27,12 +27,22 @@
 		B040DB2F252D740E009FBC10 /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B040DB2E252D740E009FBC10 /* RadioViewController.swift */; };
 		B040DB31252D74DD009FBC10 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B040DB30252D74DD009FBC10 /* PlayerViewController.swift */; };
 		B040DB33252D9C38009FBC10 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B040DB32252D9C38009FBC10 /* HomeViewController.swift */; };
+		B040DB3A252DB48C009FBC10 /* VTVCabResourceLoaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B040DB35252DB48C009FBC10 /* VTVCabResourceLoaderDelegate.swift */; };
+		B040DB3B252DB48C009FBC10 /* VTVCabResourceLoaderDelegateSecure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B040DB36252DB48C009FBC10 /* VTVCabResourceLoaderDelegateSecure.swift */; };
+		B040DB3C252DB48C009FBC10 /* VTVCabPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B040DB37252DB48C009FBC10 /* VTVCabPlayer.swift */; };
+		B040DB3D252DB48C009FBC10 /* VTVCabPlayerSecure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B040DB38252DB48C009FBC10 /* VTVCabPlayerSecure.swift */; };
+		B040DB41252DB4C4009FBC10 /* VTVCabPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B040DB3F252DB4C4009FBC10 /* VTVCabPlayerDelegate.swift */; };
+		B040DB42252DB4C4009FBC10 /* VTVCabHelperDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B040DB40252DB4C4009FBC10 /* VTVCabHelperDelegate.swift */; };
+		B040DB44252DB55C009FBC10 /* PlaybackControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B040DB43252DB55C009FBC10 /* PlaybackControl.swift */; };
+		B040DB46252DB578009FBC10 /* PlaybackControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = B040DB45252DB578009FBC10 /* PlaybackControl.xib */; };
+		B040DB48252DC030009FBC10 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B040DB47252DC030009FBC10 /* WebKit.framework */; };
 		B084632B252ACB4E0092E0D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084632A252ACB4E0092E0D6 /* AppDelegate.swift */; };
 		B0846330252ACB4E0092E0D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B084632E252ACB4E0092E0D6 /* Main.storyboard */; };
 		B0846332252ACB510092E0D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0846331252ACB510092E0D6 /* Assets.xcassets */; };
 		B0846335252ACB510092E0D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0846333252ACB510092E0D6 /* LaunchScreen.storyboard */; };
 		B0846340252ACB510092E0D6 /* VTC_NEWSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084633F252ACB510092E0D6 /* VTC_NEWSTests.swift */; };
 		B084634B252ACB510092E0D6 /* VTC_NEWSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084634A252ACB510092E0D6 /* VTC_NEWSUITests.swift */; };
+		B0C79836253D7D7F001ADD8B /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C79835253D7D7F001ADD8B /* Report.swift */; };
 		D9B1F1FAD43E79B3560EBAC0 /* Pods_VTC_NEWS_VTC_NEWSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA88F829D9103EC72680987 /* Pods_VTC_NEWS_VTC_NEWSUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +91,15 @@
 		B040DB2E252D740E009FBC10 /* RadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
 		B040DB30252D74DD009FBC10 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		B040DB32252D9C38009FBC10 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B040DB35252DB48C009FBC10 /* VTVCabResourceLoaderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTVCabResourceLoaderDelegate.swift; sourceTree = "<group>"; };
+		B040DB36252DB48C009FBC10 /* VTVCabResourceLoaderDelegateSecure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTVCabResourceLoaderDelegateSecure.swift; sourceTree = "<group>"; };
+		B040DB37252DB48C009FBC10 /* VTVCabPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTVCabPlayer.swift; sourceTree = "<group>"; };
+		B040DB38252DB48C009FBC10 /* VTVCabPlayerSecure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTVCabPlayerSecure.swift; sourceTree = "<group>"; };
+		B040DB3F252DB4C4009FBC10 /* VTVCabPlayerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTVCabPlayerDelegate.swift; sourceTree = "<group>"; };
+		B040DB40252DB4C4009FBC10 /* VTVCabHelperDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTVCabHelperDelegate.swift; sourceTree = "<group>"; };
+		B040DB43252DB55C009FBC10 /* PlaybackControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControl.swift; sourceTree = "<group>"; };
+		B040DB45252DB578009FBC10 /* PlaybackControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaybackControl.xib; sourceTree = "<group>"; };
+		B040DB47252DC030009FBC10 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B0846327252ACB4E0092E0D6 /* VTC NEWS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VTC NEWS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B084632A252ACB4E0092E0D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B084632F252ACB4E0092E0D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +112,7 @@
 		B0846346252ACB510092E0D6 /* VTC NEWSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VTC NEWSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B084634A252ACB510092E0D6 /* VTC_NEWSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTC_NEWSUITests.swift; sourceTree = "<group>"; };
 		B084634C252ACB510092E0D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0C79835253D7D7F001ADD8B /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		F82A850E8C36D51BDA01F50E /* Pods-VTC NEWS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTC NEWS.release.xcconfig"; path = "Target Support Files/Pods-VTC NEWS/Pods-VTC NEWS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B040DB48252DC030009FBC10 /* WebKit.framework in Frameworks */,
 				16A916FBFF4F42FB5C990020 /* Pods_VTC_NEWS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +148,7 @@
 		0EA51254EC80F5DA8C9B6278 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B040DB47252DC030009FBC10 /* WebKit.framework */,
 				5D2319FF2E578EBB171895EA /* Pods_VTC_NEWS.framework */,
 				6AA88F829D9103EC72680987 /* Pods_VTC_NEWS_VTC_NEWSUITests.framework */,
 				A57D065DD703A4D63B1473F2 /* Pods_VTC_NEWSTests.framework */,
@@ -139,6 +161,7 @@
 			children = (
 				B02912AB252AD82D00EDFA87 /* DetailModel.swift */,
 				B02912AD252ADA9300EDFA87 /* Location.swift */,
+				B0C79835253D7D7F001ADD8B /* Report.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +203,15 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		B040DB3E252DB4AA009FBC10 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B040DB40252DB4C4009FBC10 /* VTVCabHelperDelegate.swift */,
+				B040DB3F252DB4C4009FBC10 /* VTVCabPlayerDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		B084631E252ACB4E0092E0D6 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +240,13 @@
 				B02912C9252B268D00EDFA87 /* VTC NEWS.entitlements */,
 				B040DB2B252D73EB009FBC10 /* VC */,
 				B02912AF252ADFDD00EDFA87 /* Common */,
+				B040DB3E252DB4AA009FBC10 /* Protocol */,
+				B040DB43252DB55C009FBC10 /* PlaybackControl.swift */,
+				B040DB45252DB578009FBC10 /* PlaybackControl.xib */,
+				B040DB37252DB48C009FBC10 /* VTVCabPlayer.swift */,
+				B040DB38252DB48C009FBC10 /* VTVCabPlayerSecure.swift */,
+				B040DB35252DB48C009FBC10 /* VTVCabResourceLoaderDelegate.swift */,
+				B040DB36252DB48C009FBC10 /* VTVCabResourceLoaderDelegateSecure.swift */,
 				B02912AA252AD80900EDFA87 /* Model */,
 				B084632A252ACB4E0092E0D6 /* AppDelegate.swift */,
 				B084632E252ACB4E0092E0D6 /* Main.storyboard */,
@@ -359,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B040DB46252DB578009FBC10 /* PlaybackControl.xib in Resources */,
 				B02912C1252ADFDD00EDFA87 /* Pod_Asset_BMPlayer.xcassets in Resources */,
 				B0846335252ACB510092E0D6 /* LaunchScreen.storyboard in Resources */,
 				B0846332252ACB510092E0D6 /* Assets.xcassets in Resources */,
@@ -492,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B02912AC252AD82D00EDFA87 /* DetailModel.swift in Sources */,
+				B040DB3D252DB48C009FBC10 /* VTVCabPlayerSecure.swift in Sources */,
 				B040DB2F252D740E009FBC10 /* RadioViewController.swift in Sources */,
 				B02912C3252ADFDD00EDFA87 /* PlayerProtocols.swift in Sources */,
 				B02912AE252ADA9300EDFA87 /* Location.swift in Sources */,
@@ -499,12 +540,19 @@
 				B084632B252ACB4E0092E0D6 /* AppDelegate.swift in Sources */,
 				B02912C5252ADFDD00EDFA87 /* Player.swift in Sources */,
 				B02912C4252ADFDD00EDFA87 /* TimeSlider.swift in Sources */,
+				B040DB41252DB4C4009FBC10 /* VTVCabPlayerDelegate.swift in Sources */,
+				B040DB3C252DB48C009FBC10 /* VTVCabPlayer.swift in Sources */,
 				B02912BF252ADFDD00EDFA87 /* PlayerClearityChooseButton.swift in Sources */,
+				B040DB3B252DB48C009FBC10 /* VTVCabResourceLoaderDelegateSecure.swift in Sources */,
+				B040DB42252DB4C4009FBC10 /* VTVCabHelperDelegate.swift in Sources */,
+				B040DB3A252DB48C009FBC10 /* VTVCabResourceLoaderDelegate.swift in Sources */,
 				B02912C0252ADFDD00EDFA87 /* PlayerManager.swift in Sources */,
+				B040DB44252DB55C009FBC10 /* PlaybackControl.swift in Sources */,
 				B02912BE252ADFDD00EDFA87 /* PlayerControlView.swift in Sources */,
 				B02912BD252ADFDD00EDFA87 /* PlayerSubtitles.swift in Sources */,
 				B02912C6252ADFDD00EDFA87 /* PlayerItem.swift in Sources */,
 				B040DB2D252D7403009FBC10 /* DetailViewController.swift in Sources */,
+				B0C79836253D7D7F001ADD8B /* Report.swift in Sources */,
 				B02912BC252ADFDD00EDFA87 /* AppConst.swift in Sources */,
 				B02912C2252ADFDD00EDFA87 /* PlayerLayerView.swift in Sources */,
 				B040DB31252D74DD009FBC10 /* PlayerViewController.swift in Sources */,
@@ -613,7 +661,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -668,7 +716,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

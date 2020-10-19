@@ -13,6 +13,8 @@ target 'VTC NEWS' do
   pod 'SnapKit'
   pod 'GoSwiftyM3U8'
   pod 'SwiftEventBus'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
   # add pods for any other desired Firebase products
   pod 'SnapKit'
   # https://firebase.google.com/docs/ios/setup#available-pods

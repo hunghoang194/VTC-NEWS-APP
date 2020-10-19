@@ -79,7 +79,7 @@ open class Player: UIView {
     
     fileprivate var customControlView: PlayerControlView?
     
-    fileprivate var isFullScreen:Bool {
+    open var isFullScreen:Bool {
         get {
             return UIApplication.shared.statusBarOrientation.isLandscape
         }
@@ -217,7 +217,6 @@ open class Player: UIView {
         playerLayer?.prepareToDeinit()
         controlView.prepareToDealloc()
     }
-    
     /**
      If you want to create Player with custom control in storyboard.
      create a subclass and override this method.
@@ -447,7 +446,7 @@ open class Player: UIView {
         playerLayer?.seekBackward()
     }
     // cast
-    fileprivate func cast() {
+    open func cast() {
         playerLayer?.castScreen()
     }
 //     share
@@ -516,6 +515,12 @@ extension Player: PlayerLayerViewDelegate {
     public func Player(player: PlayerLayerView, playTimeDidChange currentTime: TimeInterval, totalTime: TimeInterval) {
         PlayerManager.shared.log("playTimeDidChange - \(currentTime) - \(totalTime)")
         delegate?.Player(player: self, playTimeDidChange: currentTime, totalTime: totalTime)
+        // report
+        ReportClient.shared.teKReport?.videoDuration = String(totalTime)
+        if currentTime == 0.0{
+            ReportClient.shared.teKReport?.playRequest = String(Date().timeIntervalSince1970 * 1000)
+        }
+        //
         self.currentPosition = currentTime
         totalDuration = totalTime
         if isSliderSliding {

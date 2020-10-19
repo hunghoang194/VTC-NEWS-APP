@@ -13,7 +13,7 @@ import WebKit
 import CoreMedia
 import AVFoundation
 import GoogleInteractiveMediaAds
-import GoogleCast
+//import GoogleCast
 
 class DetailViewController: UIViewController {
     var str_url : String!
@@ -44,11 +44,12 @@ class DetailViewController: UIViewController {
     var adsLoader: IMAAdsLoader!
     var adsManager: IMAAdsManager!
     
-    var sessionManager: GCKSessionManager!
+//    var sessionManager: GCKSessionManager!
+//    var deviceManager: GCKDevice!
     var mediaView: UIView!
-    private var miniMediaControlsViewController: GCKUIMiniMediaControlsViewController!
-    var des: String = "Tên Description"
-    var titleMovie: String = "Tên Video"
+//    private var miniMediaControlsViewController: GCKUIMiniMediaControlsViewController!
+    var des: String = "Cảm ơn bạn đã sử dụng"
+    var titleMovie: String = "Nội dung được phát hành từ VTC NOW"
     
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -70,10 +71,10 @@ class DetailViewController: UIViewController {
         if(webUrl != nil && webUrl != ""){
             setUpWeb()
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.shareLinkNotification(notification:)), name: Notification.Name("shareLink"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.shareScreenNotification(notification:)), name: Notification.Name("castScreen"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.shareLinkNotification(notification:)), name: Notification.Name("shareLink"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.shareScreenNotification(notification:)), name: Notification.Name("castScreen"), object: nil)
         // cast
-        setUpCast()
+//        setUpCast()
         customerControl()
     }
     
@@ -95,14 +96,76 @@ class DetailViewController: UIViewController {
     @objc func shareLinkNotification(notification: Notification) {
         share()
     }
-    @objc func shareScreenNotification(notification: Notification) {
-        castScreen()
-    }
-    deinit {
-        NotificationCenter.default.removeObserver(self, name: Notification.Name("shareLink"), object: nil)
-        NotificationCenter.default.removeObserver(self, name: Notification.Name("castScreen"), object: nil)
+//    @objc func shareScreenNotification(notification: Notification) {
+//        castScreen()
+//    }
+    
+//    func setUpCast() {
+//        sessionManager = GCKCastContext.sharedInstance().sessionManager
+//        sessionManager.add(self)
+//        mediaView = UIView(frame: CGRect(x: 0, y: self.view.frame.height - 70 - (UIApplication.shared.keyWindow?.safeAreaInsets.bottom)!, width: self.view.frame.width, height: 70))
+//        self.view.addSubview(mediaView!)
+//        let castContext = GCKCastContext.sharedInstance()
+//        miniMediaControlsViewController = castContext.createMiniMediaControlsViewController()
+//        miniMediaControlsViewController.delegate = self
+//        updateControlBarsVisibility(shouldAppear: true)
+//        //        installViewController(miniMediaControlsViewController, inContainerView: mediaView!)
+//    }
+//    func installViewController(_ viewController: UIViewController?, inContainerView containerView: UIView) {
+//        if let viewController = viewController {
+//            addChild(viewController)
+//            viewController.view.frame = containerView.bounds
+//            containerView.addSubview(viewController.view)
+//            viewController.didMove(toParent: self)
+//        }
+//    }
+//    func updateControlBarsVisibility(shouldAppear: Bool = false) {
+//        if shouldAppear {
+//            mediaView!.isHidden = false
+//        } else {
+//            //                mediaView!.isHidden = true
+//        }
+//        UIView.animate(withDuration: 1, animations: { () -> Void in
+//            self.view.layoutIfNeeded()
+//        })
+//        view.setNeedsLayout()
+//    }
+    // cast
+//    deinit {
+//        NotificationCenter.default.removeObserver(self)
+//    }
+    func castScreen() {
+//        let url = URL.init(string: str_url)
+//        print("link cast là: \(str_url ?? "")")
+//        guard let mediaURL = url else {
+//            print("invalid mediaURL")
+//            return
+//        }
+//        let metadata = GCKMediaMetadata()
+//        metadata.setString(titleMovie, forKey: kGCKMetadataKeyTitle)
+//        metadata.setString(des,forKey: kGCKMetadataKeySubtitle)
+//        metadata.addImage(GCKImage(url: URL(string: "https://scontent.fhph1-1.fna.fbcdn.net/v/t1.0-9/84208556_2491292227755355_5135490819574202368_o.png?_nc_cat=1&_nc_sid=85a577&_nc_ohc=FQMK0LsHP_MAX-vJdHl&_nc_ht=scontent.fhph1-1.fna&oh=7ab281a98fb4a4d1c3ee51b9e2162b48&oe=5FA47410")!,
+//                                   width: 480,
+//                                   height: 360))
+//        let mediaInfoBuilder = GCKMediaInformationBuilder.init(contentURL: mediaURL)
+//        mediaInfoBuilder.streamType = GCKMediaStreamType.unknown;
+//        mediaInfoBuilder.contentType = "video/mp4"
+//        mediaInfoBuilder.metadata = metadata;
+//        let mediaInformation = mediaInfoBuilder.build()
+//
+//        if let request = sessionManager.currentSession?.remoteMediaClient?.loadMedia(mediaInformation) {
+//            request.delegate = self
+//        }
+        //        GCKCastContext.sharedInstance().presentDefaultExpandedMediaControls()
     }
     
+    func customerControl() {
+        if isLive == true {
+            playerView?.hideControl()
+        } else if isLive == false {
+            playerView?.unHideControl()
+        }
+    }
     func setUpTop(){
         if(topUrl != nil && topUrl != ""){
             mTop.backgroundColor = UIColor.white
@@ -127,6 +190,7 @@ class DetailViewController: UIViewController {
     }
     
     func onBackPress(){
+        str_url = ""
         playerView.pause()
         self.dismiss(animated: true, completion: nil)
     }
@@ -174,7 +238,7 @@ class DetailViewController: UIViewController {
         // Create ad display container for ad rendering.
         //        let adDisplayContainer = IMAAdDisplayContainer(adContainer: self.Player)
         
-        let adDisplayContainer = IMAAdDisplayContainer(adContainer: self.playerView, companionSlots: nil)
+        let adDisplayContainer = IMAAdDisplayContainer(adContainer: self.playerView, viewController: self, companionSlots: nil)
         // Create an ad request with our ad tag, display container, and optional user context.
         let request = IMAAdsRequest(
             adTagUrl: DetailViewController.kTestAppAdTagUrl,
@@ -187,7 +251,9 @@ class DetailViewController: UIViewController {
     @objc func contentDidFinishPlaying(_ notification: Notification) {
         adsLoader.contentComplete()
     }
-    
+    @objc public func tail(string: String) -> String {
+        return String(string.prefix(10))
+    }
     func showContentPlayer() {
         let asset = PlayerResource(url: URL(string: str_url)!,cover: nil,subtitle: nil)
         playerView.setVideo(resource: asset)
@@ -205,6 +271,27 @@ class DetailViewController: UIViewController {
             return
         }
     }
+    // share
+    func share() {
+        let URLstring =  String(format:str_url)
+        let urlToShare = URL(string:URLstring)
+        let activityViewController = UIActivityViewController(
+            activityItems: [urlToShare!],
+            applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        //so that ipads won't crash
+        present(activityViewController,animated: true,completion: nil)
+    }
+    func getDateTime() {
+        let currentDate = NSDate()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        let convertedDate = dateFormatter.string(from: currentDate as Date)
+        let date = tail(string: convertedDate)
+        let hours = convertedDate[convertedDate.index(convertedDate.startIndex, offsetBy: 11)...]
+        ReportClient.shared.teKReport?.date = date
+        ReportClient.shared.teKReport?.dateHour = String(hours)
+    }
 }
 
 extension Notification.Name {
@@ -214,6 +301,7 @@ extension Notification.Name {
 extension DetailViewController : WKUIDelegate{
     func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
         if(message != ""){
+            getDateTime()
             do {
                 let data = message.data(using: String.Encoding.utf8)
                 let model = try JSONDecoder().decode(DetailModel.self, from: data!)
@@ -258,83 +346,7 @@ extension DetailViewController : WKUIDelegate{
         }
         completionHandler()
     }
-    // MARK: - Control
-    func customerControl() {
-        if isLive == true {
-            playerView?.hideControl()
-        } else if isLive == false {
-            playerView?.unHideControl()
-        }
-    }
-    // share
-    func share() {
-        let URLstring =  String(format:str_url)
-        let urlToShare = URL(string:URLstring)
-        let activityViewController = UIActivityViewController(
-            activityItems: [urlToShare!],
-            applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.view
-        //so that ipads won't crash
-        present(activityViewController,animated: true,completion: nil)
-    }
 }
-    func setUpCast() {
-        sessionManager = GCKCastContext.sharedInstance().sessionManager
-        sessionManager.add(self)
-        mediaView = UIView(frame: CGRect(x: 0, y: self.view.frame.height - 70 - (UIApplication.shared.keyWindow?.safeAreaInsets.bottom)!, width: self.view.frame.width, height: 70))
-        self.view.addSubview(mediaView!)
-        let castContext = GCKCastContext.sharedInstance()
-        miniMediaControlsViewController = castContext.createMiniMediaControlsViewController()
-        miniMediaControlsViewController.delegate = self
-        updateControlBarsVisibility(shouldAppear: true)
-    //        installViewController(miniMediaControlsViewController, inContainerView: mediaView!)
-}
-    func installViewController(_ viewController: UIViewController?, inContainerView containerView: UIView) {
-        if let viewController = viewController {
-            addChild(viewController)
-            viewController.view.frame = containerView.bounds
-            containerView.addSubview(viewController.view)
-            viewController.didMove(toParent: self)
-        }
-    }
-    func updateControlBarsVisibility(shouldAppear: Bool = false) {
-        if shouldAppear {
-            mediaView!.isHidden = false
-        } else {
-            //                mediaView!.isHidden = true
-        }
-        UIView.animate(withDuration: 1, animations: { () -> Void in
-            self.view.layoutIfNeeded()
-        })
-        view.setNeedsLayout()
-    }
-    // cast
-    func castScreen() {
-        let url = URL.init(string: str_url)
-        print("link cast là: \(str_url ?? "")")
-        guard let mediaURL = url else {
-            print("invalid mediaURL")
-            return
-        }
-        let metadata = GCKMediaMetadata()
-        metadata.setString(titleMovie, forKey: kGCKMetadataKeyTitle)
-        metadata.setString(des,forKey: kGCKMetadataKeySubtitle)
-        //        metadata.setString(titleCast ?? "", forKey: kGCKMetadataKeyTitle)
-        //        metadata.setString(descriptionCast ?? "",forKey: kGCKMetadataKeySubtitle)
-        metadata.addImage(GCKImage(url: URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg")!,
-                                   width: 480,
-                                   height: 360))
-        let mediaInfoBuilder = GCKMediaInformationBuilder.init(contentURL: mediaURL)
-        mediaInfoBuilder.streamType = GCKMediaStreamType.unknown;
-        mediaInfoBuilder.contentType = "video/mp4"
-        mediaInfoBuilder.metadata = metadata;
-        let mediaInformation = mediaInfoBuilder.build()
-        
-        if let request = sessionManager.currentSession?.remoteMediaClient?.loadMedia(mediaInformation) {
-            request.delegate = self
-        }
-        //        GCKCastContext.sharedInstance().presentDefaultExpandedMediaControls()
-    }
 
 extension DetailViewController:WKScriptMessageHandler{
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
@@ -363,7 +375,7 @@ extension DetailViewController:WKScriptMessageHandler{
         if let data = defaults.string(forKey: AppConst.DefaultsKeys.KEY_DATA_FROM_WEB){
             let js = "javascript:loadDataFromApp_return('\(data)');"
             mWebView.evaluateJavaScript(js) { (result, error) in
-                print(error)
+                print(error ?? "")
             }
         }
     }
@@ -372,10 +384,12 @@ extension DetailViewController:WKScriptMessageHandler{
 // MARK: - IMAAdsManagerDelegate
 extension DetailViewController: IMAAdsManagerDelegate {
     func adsManagerDidRequestContentPause(_ adsManager: IMAAdsManager!) {
+        ReportClient.shared.teKReport?.adModeBegin = Int(Date().timeIntervalSince1970 * 1000)
         playerView.pause()
     }
     
     func adsManagerDidRequestContentResume(_ adsManager: IMAAdsManager!) {
+        ReportClient.shared.teKReport?.adModeComplete = Int(Date().timeIntervalSince1970 * 1000)
         playerView.play()
     }
     
@@ -405,16 +419,16 @@ extension DetailViewController: IMAAdsLoaderDelegate {
     }
 }
 
-extension DetailViewController: GCKRequestDelegate {
-    
-}
-
-extension DetailViewController: GCKSessionManagerListener {
-    
-}
-extension DetailViewController: GCKUIMiniMediaControlsViewControllerDelegate {
-    func miniMediaControlsViewController(_ miniMediaControlsViewController: GCKUIMiniMediaControlsViewController, shouldAppear: Bool) {
-        updateControlBarsVisibility(shouldAppear: shouldAppear)
-    }
-}
+//    extension DetailViewController: GCKRequestDelegate {
+//
+//    }
+//
+//    extension DetailViewController: GCKSessionManagerListener {
+//
+//    }
+//    extension DetailViewController: GCKUIMiniMediaControlsViewControllerDelegate {
+//        func miniMediaControlsViewController(_ miniMediaControlsViewController: GCKUIMiniMediaControlsViewController, shouldAppear: Bool) {
+//            updateControlBarsVisibility(shouldAppear: shouldAppear)
+//        }
+//    }
 

@@ -502,6 +502,8 @@ open class PlayerControlView: UIView {
         progressView.trackTintColor = UIColor.red
         progressView.tintColor = UIColor.red
         timeSlider.isHidden = true
+        shareScreenButton.isSelected = false
+        shareScreenButton.backgroundColor = UIColor.clear
     }
     @objc open func unHideControlLive() {
         totalTimeLabel.isHidden = false
@@ -509,6 +511,7 @@ open class PlayerControlView: UIView {
         leftLabel.isHidden = false
         progressView.backgroundColor = UIColor.white
         timeSlider.isHidden = false
+        shareScreenButton.isHidden = false
     }
     
     // MARK: - Init
@@ -583,6 +586,7 @@ open class PlayerControlView: UIView {
         shareScreenButton.tag = PlayerControlView.ButtonType.cast.rawValue
         shareScreenButton.tintColor = UIColor.white
         shareScreenButton.addTarget(self, action: #selector(onButtonPressed(_:)), for: .touchUpInside)
+        fullscreenButton.setImage(ImageResourcePath("icons8-chromecast-cast-button-32"),    for: .normal)
         
         chooseDefinitionView.clipsToBounds = true
         
@@ -736,7 +740,7 @@ open class PlayerControlView: UIView {
         }
         
         bottomWrapperView.snp.makeConstraints { [unowned self](make) in
-            make.height.equalTo(80)
+            make.height.equalTo(70)
             if #available(iOS 11.0, *) {
                 make.bottom.left.right.equalTo(self.bottomMaskView.safeAreaLayoutGuide)
                 make.top.equalToSuperview()
@@ -750,7 +754,7 @@ open class PlayerControlView: UIView {
         shareScreenButton.snp.makeConstraints { (make) in
             make.width.equalTo(50)
             make.height.equalTo(50)
-            make.right.equalTo(self.shareLinkButton.snp.left).offset(20)
+            make.right.equalTo(self.shareLinkButton.snp.left).offset(10)
             make.centerY.equalTo(self.shareLinkButton)
         }
         
@@ -781,9 +785,9 @@ open class PlayerControlView: UIView {
         }
         
         fullscreenButton.snp.makeConstraints { (make) in
-            make.width.equalTo(40)
-            make.height.equalTo(30)
-            make.right.equalTo(-5)
+            make.width.equalTo(20)
+            make.height.equalTo(20)
+            make.right.equalTo(-15)
             make.centerY.equalTo(self.currentTimeLabel)
             make.right.top.equalTo(self.bottomWrapperView).offset(15)
         }

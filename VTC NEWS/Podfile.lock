@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.2.2)
   - Firebase/Analytics (6.33.0):
     - Firebase/Core
   - Firebase/Core (6.33.0):
@@ -83,17 +84,21 @@ PODS:
   - Protobuf (3.13.0)
   - SnapKit (5.0.1)
   - SwiftEventBus (5.0.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Firebase/Analytics
   - Firebase/Messaging
   - GoogleAds-IMA-iOS-SDK
   - GoSwiftyM3U8
   - SnapKit
   - SwiftEventBus
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -111,8 +116,10 @@ SPEC REPOS:
     - Protobuf
     - SnapKit
     - SwiftEventBus
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Firebase: 8db6f2d1b2c5e2984efba4949a145875a8f65fe5
   FirebaseAnalytics: 5dd088bd2e67bb9d13dbf792d1164ceaf3052193
   FirebaseCore: d889d9e12535b7f36ac8bfbf1713a0836a3012cd
@@ -130,7 +137,8 @@ SPEC CHECKSUMS:
   Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftEventBus: b30f617a6aca5a9336464b4d3f5931034762f2d5
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 24896da0387733da9ec1517b3160d425991f495e
+PODFILE CHECKSUM: 20bad2bc9053b28244dfa6ffbf22fd7dd77c4b8b
 
 COCOAPODS: 1.8.3

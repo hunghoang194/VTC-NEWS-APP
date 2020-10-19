@@ -6,6 +6,7 @@
 //  Copyright © 2020 hưng hoàng. All rights reserved.
 //
 
+
 import UIKit
 import WebKit
 import CoreLocation
@@ -33,20 +34,23 @@ class HomeViewController: UIViewController {
     var urlImage : String?
     var titleCast: String?
     var descriptionCast: String?
-    
     @IBOutlet weak var mWebView: WKWebView!
+    
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadWeb()
+        // Do any additional setup after loading the view.
         setUpWeb()
         initPullRefresh()
         setUpLocation()
         
         NotificationCenter.default.addObserver(self, selector: #selector(reloadWebView(_:)), name: NSNotification.Name("RELOAD_WEB_MAIN"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(reloadDeepLink(_:)), name: NSNotification.Name("DEEP_LINK"), object: nil)
-        let castButton = GCKUICastButton(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
-        castButton.tintColor = UIColor.gray
+//        cast()
+//        let castButton = GCKUICastButton(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
+//        castButton.tintColor = UIColor.gray
     }
     override func viewDidAppear(_ animated: Bool) {
         cast()
@@ -67,12 +71,45 @@ class HomeViewController: UIViewController {
     @objc func reloadWebView(_ noti: Notification) {
         let number = Int.random(in: 0 ..< 999999999)
         var request = URLRequest(url: URL(string: AppConst.APP_URL + "?v=" + "\(number)")!)
-        if let urlString = (noti.userInfo?["url"] as? String)?.replacingOccurrences(of: "https://appnow.tek4tv.vn", with: ""), let url = URL(string: AppConst.APP_URL + "?v=" + "\(number)" + "#\(urlString)")  {
+        if let urlString = (noti.userInfo?["url"] as? String)?.replacingOccurrences(of: "https://vtcnews.tek4tv.vn/", with: ""), let url = URL(string: AppConst.APP_URL + "?v=" + "\(number)" + "#\(urlString)")  {
             UserDefaults.standard.setValue(nil, forKey: "WEB_MAIN")
             UserDefaults.standard.synchronize()
             request = URLRequest(url: url)
             mWebView.load(request)
         }
+        mWebView.navigationDelegate = self
+        mWebView.uiDelegate = self
+        mWebView.configuration.allowsInlineMediaPlayback = true
+        mWebView.configuration.allowsPictureInPictureMediaPlayback = true
+        mWebView.configuration.mediaTypesRequiringUserActionForPlayback = []
+        mWebView.scrollView.showsHorizontalScrollIndicator = false
+        mWebView.scrollView.showsVerticalScrollIndicator = false
+    }
+    
+    func loadWeb() {
+        let number = Int.random(in: 0 ..< 999999999)
+        var request = URLRequest(url: URL(string: AppConst.APP_URL + "?v=" + "\(number)")!)
+        
+        if let urlString = (UserDefaults.standard.value(forKey: "WEB_MAIN") as? String)?.replacingOccurrences(of: "https://vtcnow.vn/", with: ""), let url = URL(string: AppConst.APP_URL + "?v=" + "\(number)" + "#\(urlString)")  {
+            UserDefaults.standard.setValue(nil, forKey: "WEB_MAIN")
+            UserDefaults.standard.synchronize()
+            request = URLRequest(url: url)
+        }else if let value = UserDefaults.standard.value(forKey: "DEEP_LINK") as? String, let url = URL(string: AppConst.APP_URL + "?v=" + "\(number)" + "#\(value)"){
+            print("value ==>" + value)
+            UserDefaults.standard.setValue(nil, forKey: "DEEP_LINK")
+            UserDefaults.standard.synchronize()
+            request = URLRequest(url: url)
+        }
+        
+        mWebView.navigationDelegate = self
+        mWebView.uiDelegate = self
+        mWebView.configuration.allowsInlineMediaPlayback = true
+        mWebView.configuration.allowsPictureInPictureMediaPlayback = true
+        mWebView.configuration.requiresUserActionForMediaPlayback = false
+        mWebView.configuration.mediaTypesRequiringUserActionForPlayback = []
+        mWebView.scrollView.showsHorizontalScrollIndicator = false
+        mWebView.scrollView.showsVerticalScrollIndicator = false
+        mWebView.load(request)
     }
     
     func initPullRefresh(){
@@ -350,4 +387,3 @@ extension UIViewController {
             toastLabel.removeFromSuperview()
         })
     } }
-

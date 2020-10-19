@@ -1,7 +1,7 @@
 
 import Foundation
 class AppConst{
-    static let APP_URL = "https://appnow.tek4tv.vn"
+    static let APP_URL = "https://vtcnews.tek4tv.vn/"
     static let JS_GET_LOCATION_REQUEST = "getLocation"
     static let JS_SAVE_DATA_FROM_WEB_REQUEST = "saveDataFromWeb"
     static let JS_LOAD_DATA_FROM_APP_REQUEST = "loadDataFromApp"

@@ -16,13 +16,17 @@ public class PlayerResource {
     public let definitions: [PlayerResourceDefinition]
 
     public convenience init(url: URL, cover: URL? = nil, subtitle: URL? = nil) {
+        ReportClient.shared.teKReport?.destinationDomain = url.host
+        let fileArray = url.absoluteString.components(separatedBy: "/")
+        let finalFileName = fileArray.last
+        ReportClient.shared.teKReport?.videoName = finalFileName
+        
         let definition = PlayerResourceDefinition(url: url, definition: "")
         
         var subtitles: PlayerSubtitles? = nil
         if let subtitle = subtitle {
             subtitles = PlayerSubtitles(url: subtitle)
         }
-        
         self.init(definitions: [definition], cover: cover, subtitles: subtitles)
     }
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vsG-Tf-aQJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -35,7 +35,7 @@
                         <viewLayoutGuide key="safeArea" id="6eg-g0-ssL"/>
                     </view>
                     <connections>
-                        <outlet property="mWebView" destination="EeP-sG-1OB" id="fA0-oo-5HO"/>
+                        <outlet property="mWebView" destination="EeP-sG-1OB" id="n8x-7j-NAb"/>
                         <segue destination="bT9-X7-6MT" kind="show" identifier="showDetail" id="O6d-q3-TC2"/>
                         <segue destination="5wC-A9-Wle" kind="show" identifier="showFull" id="c3h-c5-hAI"/>
                         <segue destination="J2b-AK-xgx" kind="show" identifier="goToRadio" id="sVH-JW-k6r"/>
@@ -70,9 +70,15 @@
                                         <state key="normal" image="ic_pause">
                                             <color key="titleColor" red="1" green="0.26436508959999999" blue="0.22712506199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="pause:" destination="5wC-A9-Wle" eventType="touchUpInside" id="rj4-5R-2gX"/>
+                                        </connections>
                                     </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Os-Al-WhA">
                                         <rect key="frame" x="-2" y="777" width="418" height="31"/>
+                                        <connections>
+                                            <action selector="handleSlider:" destination="5wC-A9-Wle" eventType="valueChanged" id="iZb-YB-CWo"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clh-mo-UC7">
                                         <rect key="frame" x="5" y="754" width="42" height="18"/>
@@ -95,6 +101,9 @@
                                         <state key="normal" image="ic_collapse">
                                             <color key="titleColor" red="1" green="0.26436508959999999" blue="0.22712506199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancel:" destination="5wC-A9-Wle" eventType="touchUpInside" id="GBm-Sg-PWq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,6 +140,15 @@
                         <viewLayoutGuide key="safeArea" id="Gs2-vL-xMe"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zmp-4Y-Et4"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="E3U-CJ-Ga3" id="heO-2g-rDt"/>
+                        <outlet property="controlView" destination="WbA-hl-I9k" id="ElI-d7-ds8"/>
+                        <outlet property="currentTime" destination="X5Q-jU-8Cy" id="pz7-vD-1Rf"/>
+                        <outlet property="duration" destination="clh-mo-UC7" id="WEm-6F-CYJ"/>
+                        <outlet property="pauseBt" destination="rJx-Ew-Wi4" id="daI-vH-VGj"/>
+                        <outlet property="playerView" destination="MbT-wt-7OE" id="61D-xk-V6t"/>
+                        <outlet property="slider" destination="9Os-Al-WhA" id="xnS-Na-m9U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EeV-49-4zq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,13 +157,13 @@
         <!--Detail View Controller-->
         <scene sceneID="pRh-a5-iCD">
             <objects>
-                <viewController id="bT9-X7-6MT" customClass="DetailViewController" customModule="VTC_NEWS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="bT9-X7-6MT" customClass="DetailViewController" customModule="VTC_NEWS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CwZ-Mh-PIO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSq-Dp-jWn">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RvN-xS-MNU"/>
@@ -160,15 +178,15 @@
                                     </mask>
                                 </variation>
                             </wkWebView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMZ-Qs-LhZ" customClass="Player" customModule="VTCNOW" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="414" height="233"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMZ-Qs-LhZ" customClass="Player" customModule="VTC_NEWS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="414" height="233"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dMZ-Qs-LhZ" secondAttribute="height" multiplier="16:9" id="zyy-uW-AYR"/>
                                 </constraints>
                             </view>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uo1-fz-Iic">
-                                <rect key="frame" x="0.0" y="283" width="414" height="525"/>
+                                <rect key="frame" x="0.0" y="327" width="414" height="535"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="OTI-6F-IM5"/>
@@ -233,20 +251,20 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Ibb-SC-DjE"/>
-                                <exclude reference="8YA-ID-1Hv"/>
-                                <exclude reference="vld-W9-Ra9"/>
-                                <exclude reference="IX0-fw-lsd"/>
-                                <exclude reference="knU-09-POc"/>
-                                <exclude reference="cN4-F7-rFa"/>
-                                <exclude reference="zzb-eJ-Xpw"/>
-                                <exclude reference="krJ-wi-i4C"/>
                                 <exclude reference="4N0-J9-RAj"/>
-                                <exclude reference="H19-lg-ggE"/>
-                                <exclude reference="WsU-o6-vf3"/>
+                                <exclude reference="8YA-ID-1Hv"/>
                                 <exclude reference="CIr-mX-yR6"/>
+                                <exclude reference="H19-lg-ggE"/>
+                                <exclude reference="IX0-fw-lsd"/>
                                 <exclude reference="UAh-H2-d7K"/>
-                                <exclude reference="y3x-nL-G0m"/>
+                                <exclude reference="WsU-o6-vf3"/>
+                                <exclude reference="cN4-F7-rFa"/>
+                                <exclude reference="knU-09-POc"/>
+                                <exclude reference="krJ-wi-i4C"/>
+                                <exclude reference="vld-W9-Ra9"/>
+                                <exclude reference="zzb-eJ-Xpw"/>
                                 <exclude reference="34Z-Cy-csu"/>
+                                <exclude reference="y3x-nL-G0m"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
@@ -256,28 +274,28 @@
                             <mask key="constraints">
                                 <include reference="Ibb-SC-DjE"/>
                                 <exclude reference="8YA-ID-1Hv"/>
-                                <include reference="vld-W9-Ra9"/>
-                                <exclude reference="knU-09-POc"/>
-                                <exclude reference="cN4-F7-rFa"/>
-                                <exclude reference="m07-5w-98D"/>
-                                <exclude reference="wIM-OL-j2v"/>
-                                <include reference="WsU-o6-vf3"/>
                                 <include reference="CIr-mX-yR6"/>
-                                <exclude reference="y3x-nL-G0m"/>
+                                <include reference="WsU-o6-vf3"/>
+                                <exclude reference="cN4-F7-rFa"/>
+                                <exclude reference="knU-09-POc"/>
+                                <exclude reference="m07-5w-98D"/>
+                                <include reference="vld-W9-Ra9"/>
+                                <exclude reference="wIM-OL-j2v"/>
                                 <exclude reference="VFl-xc-xOe"/>
+                                <exclude reference="y3x-nL-G0m"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
                             <mask key="constraints">
-                                <exclude reference="imx-R3-rc3"/>
-                                <exclude reference="m07-5w-98D"/>
-                                <include reference="zzb-eJ-Xpw"/>
-                                <include reference="krJ-wi-i4C"/>
-                                <exclude reference="wIM-OL-j2v"/>
                                 <include reference="4N0-J9-RAj"/>
                                 <include reference="UAh-H2-d7K"/>
-                                <exclude reference="VFl-xc-xOe"/>
+                                <exclude reference="imx-R3-rc3"/>
+                                <include reference="krJ-wi-i4C"/>
+                                <exclude reference="m07-5w-98D"/>
+                                <exclude reference="wIM-OL-j2v"/>
+                                <include reference="zzb-eJ-Xpw"/>
                                 <include reference="34Z-Cy-csu"/>
+                                <exclude reference="VFl-xc-xOe"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -286,9 +304,9 @@
                                 <exclude reference="Uo1-fz-Iic"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="H19-lg-ggE"/>
                                 <include reference="IX0-fw-lsd"/>
                                 <exclude reference="wIM-OL-j2v"/>
-                                <include reference="H19-lg-ggE"/>
                                 <exclude reference="VFl-xc-xOe"/>
                             </mask>
                         </variation>
@@ -320,7 +338,7 @@
                                     <constraint firstAttribute="height" constant="233" id="BjG-v9-A3h"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vl-Lh-XsX" customClass="PlaybackControl" customModule="VTCNOW" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vl-Lh-XsX" customClass="PlaybackControl" customModule="VTC_NEWS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
